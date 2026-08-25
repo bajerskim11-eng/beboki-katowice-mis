@@ -32,22 +32,22 @@ export function Hero() {
 
         <div className="mt-10 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
           <Button
-            asChild
+            render={<a href="#zapowiedz" />}
+            nativeButton={false}
             size="lg"
             className="h-13 w-full rounded-full px-8 text-base font-semibold sm:w-auto"
           >
-            <a href="#zapowiedz">
-              <Play className="size-5" aria-hidden="true" />
-              Obejrzyj Zapowiedź
-            </a>
+            <Play className="size-5" aria-hidden="true" />
+            Obejrzyj Zapowiedź
           </Button>
           <Button
-            asChild
+            render={<a href="#beboki" />}
+            nativeButton={false}
             size="lg"
             variant="outline"
             className="h-13 w-full rounded-full border-border bg-card/60 px-8 text-base sm:w-auto"
           >
-            <a href="#beboki">Wybierz swojego Beboka</a>
+            Wybierz swojego Beboka
           </Button>
         </div>
 

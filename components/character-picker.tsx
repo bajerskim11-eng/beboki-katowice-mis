@@ -65,7 +65,7 @@ export function CharacterPicker() {
         </p>
 
         <div className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
-          {beboki.map((b) => {
+          {beboki.map((b, i) => {
             const isSelected = selected === b.id
             const Icon = b.icon
             return (
@@ -87,6 +87,7 @@ export function CharacterPicker() {
                     alt={`${b.name} — ${b.role}`}
                     fill
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                    loading={i === 0 ? 'eager' : 'lazy'}
                     className="object-cover object-top"
                   />
                   <span
